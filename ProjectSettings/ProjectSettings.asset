@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: d1f12051c39e9463fb5298c441486f03
+  productGUID: 1ce7070e8e94442509b375337dcfaaeb
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Dev Midterm
+  productName: IntermDevMidterm
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -626,14 +626,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Dev Midterm
+  metroPackageName: IntermDevMidterm
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Dev Midterm
+  metroApplicationDescription: IntermDevMidterm
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -701,10 +701,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 8bdac92d-5b52-4abf-8bcc-51d4750d9c29
+  cloudProjectId: 84ac41b9-6a5a-44fb-b61f-445fdb6b3a4c
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Dev Midterm 2024-03-03_19-57-32
+  projectName: IntermDevMidterm
   organizationId: kuang_pai
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
