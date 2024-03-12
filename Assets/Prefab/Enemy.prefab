@@ -102,6 +102,7 @@ MonoBehaviour:
   speed: 4
   HP: 10
   damage: 2
+  EXPPrefab: {fileID: 3988240460508725007, guid: 1f0d90a48739e4b9c82e863d2cd4e7e0, type: 3}
 --- !u!70 &8624816489504645419
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterPlayer : MonoBehaviour
 {
@@ -13,17 +14,18 @@ public class CharacterPlayer : MonoBehaviour
     public float BulletCD = 3;
     private float timeFiredBullet = 1000;  // So that the first bullet can be fired immediately
     
-    [HideInInspector]public float EXPFactor = 1f;
+    [HideInInspector] public float EXPFactor = 1f;
     [HideInInspector] public float EXP = 0f;
     [HideInInspector] public int playerLevel = 0;
     private float previousEXP = 1f;
     private float previousPreviousEXP = 1f;
 
-    [SerializeField]private GameObject bulletPrefab;
+    [SerializeField] private GameObject bulletPrefab;
 
     [SerializeField] private Slider HPBar;
+    [SerializeField] private TextMeshProUGUI LevelText;
 
-    [HideInInspector]public float HP = 10f;
+    [HideInInspector] public float HP = 10f;
     [HideInInspector] public float MaxHP = 10f;
 
     private void Awake()
@@ -43,6 +45,9 @@ public class CharacterPlayer : MonoBehaviour
     {
         // HP Bar
         HPBar.value = HP/MaxHP;
+
+        // Level
+        LevelText.text = "Level: " + playerLevel;
 
         // Get Mouse Position
         var mousePosition = Input.mousePosition;

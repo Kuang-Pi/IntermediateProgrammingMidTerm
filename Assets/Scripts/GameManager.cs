@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject playerObject;
+
+    private float timeSinceLastSpawn = 0f;
+    private float spawnCD = 5f;
+    [SerializeField] private GameObject enemyPrefab;
     private void Awake()
     {
         if (GameManager.instance != null)
@@ -33,5 +37,18 @@ public class GameManager : MonoBehaviour
     {
         // Get player's current location. 
         playerLocation = playerObject.transform.position;
+
+        // Spawn some enemy
+        if (Time.time - timeSinceLastSpawn > spawnCD)
+        {
+            timeSinceLastSpawn = Time.time;
+            SpawnEnemy();
+        }
+    }
+
+    private void SpawnEnemy()
+    {
+        // Spawn an enemy at a random location
+        var enemy = Instantiate(enemyPrefab, new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 0), Quaternion.identity);
     }
 }

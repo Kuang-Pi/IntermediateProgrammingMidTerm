@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     [HideInInspector]public float HP = 10f;
     [HideInInspector] public float damage = 2f;
 
+    [SerializeField] private GameObject EXPPrefab;
+
     // Update is called once per frame
     void Update()
     {
@@ -17,6 +19,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            Instantiate(EXPPrefab, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
 
