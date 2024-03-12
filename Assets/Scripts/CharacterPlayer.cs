@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CharacterPlayer : MonoBehaviour
 {
@@ -43,6 +44,12 @@ public class CharacterPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Death
+        if(HP <= 0)
+        {
+            SceneManager.LoadScene("Menu");
+        }
+        
         // HP Bar
         HPBar.value = HP/MaxHP;
 
