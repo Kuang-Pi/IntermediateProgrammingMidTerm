@@ -19,8 +19,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            Instantiate(EXPPrefab, this.transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
+            this.OnDeath();
         }
 
     }
@@ -32,12 +31,18 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Weapon"))
         {
-            var otherObject = collision.gameObject.GetComponentInChildren<Weapon>();
+            var otherObject = collision.gameObject.GetComponentInChildren<WeaponObject>();
             this.HP -= otherObject.damage;
             if(otherObject is Bullet)
             {
                 Destroy(otherObject.gameObject);
             }
         }
+    }
+
+    protected virtual void OnDeath()
+    {
+        Instantiate(EXPPrefab, this.transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
     }
 }

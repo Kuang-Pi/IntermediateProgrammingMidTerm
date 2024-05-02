@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class Collectable : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,7 +16,16 @@ public class Collectable : MonoBehaviour
     {
         
     }
-    public void OnPlayerCollect()
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            OnPlayerCollect();
+        }
+    }
+
+    public virtual void OnPlayerCollect()
     {
         Destroy(gameObject);
     }

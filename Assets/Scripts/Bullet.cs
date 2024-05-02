@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : Weapon
+public class Bullet : WeaponObject
 {
     // Considering there might be effect that change the speed of the bullet after it is fired. 
     [HideInInspector]public float speed = 12f;

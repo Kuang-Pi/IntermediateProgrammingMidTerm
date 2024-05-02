@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [HideInInspector]
-    public static GameManager instance;
-    [HideInInspector]
-    public Vector3 playerLocation = new();
+    [HideInInspector] public static GameManager instance;
+    [HideInInspector] public Vector3 playerLocation = new();
 
-    [SerializeField]
-    private GameObject playerObject;
+    [SerializeField] private GameObject playerObject;
 
     private float timeSinceLastSpawn = 0f;
-    private float spawnCD = 5f;
+    private float spawnCD = 6f;
     [SerializeField] private GameObject enemyPrefab;
+
+    public enum WeaponType
+    {
+        Basic
+    }
     private void Awake()
     {
         if (GameManager.instance != null)

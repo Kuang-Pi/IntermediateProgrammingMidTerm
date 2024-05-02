@@ -16,7 +16,7 @@ public class CollectableEXP : Collectable
     {
         
     }
-    new public void OnPlayerCollect()
+    public override void OnPlayerCollect()
     {
         CharacterPlayer.instance.GainEXP(EXPGiving);
         base.OnPlayerCollect();
